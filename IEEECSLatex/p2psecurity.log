@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.9 (MiKTeX 2.7) (preloaded format=pdflatex 2009.8.3)  25 AUG 2009 04:19
+This is pdfTeX, Version 3.1415926-1.40.9 (MiKTeX 2.7) (preloaded format=pdflatex 2009.8.3)  7 SEP 2009 08:53
 entering extended mode
 **p2psecurity.tex
 (p2psecurity.tex
@@ -111,22 +111,35 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 406.
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
 Missing character: There is no ‘ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 Missing character: There is no — in font ptmr7t!
 Missing character: There is no — in font ptmr7t!
 Missing character: There is no ‘ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 585.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 585.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 585.
+
+Underfull \vbox (badness 4036) has occurred while \output is active []
+
  [1{C:/ProgramData/MiKTeX/2.7/pdftex/config/pdftex.map}
 
 
 ]
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
+Missing character: There is no ‘ in font ptmr7t!
+Missing character: There is no ’ in font ptmr7t!
+Missing character: There is no ‘ in font ptmr7t!
+Missing character: There is no ’ in font ptmr7t!
+Missing character: There is no — in font ptmr7t!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 599.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 599.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 599.
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -138,26 +151,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
-
-] (p2psecurity.aux)
+[2] (p2psecurity.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 962 strings out of 95304
- 16342 string characters out of 1182843
- 68316 words of memory out of 1500000
+ 961 strings out of 95304
+ 16336 string characters out of 1182843
+ 71316 words of memory out of 1500000
  4225 multiletter control sequences out of 110000
- 38198 words of font info for 72 fonts, out of 3000000 for 5000
+ 37091 words of font info for 71 fonts, out of 3000000 for 5000
  17 hyphenation exceptions out of 8191
- 26i,8n,19p,1049b,297s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,8n,19p,1129b,297s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.7/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.7/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x8
 6)/MiKTeX 2.7/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2
 .7/fonts/type1/urw/times/utmri8a.pfb>
-Output written on p2psecurity.pdf (2 pages, 49348 bytes).
+Output written on p2psecurity.pdf (2 pages, 56553 bytes).
 PDF statistics:
  22 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
