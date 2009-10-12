@@ -1,0 +1,696 @@
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[conference, compsoc]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+%\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\usepackage{graphicx}
+\usepackage{url}
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{\textbf{Performance Analysis of Evolving Wireless IEEE 802.11 Security Architectures }}
+
+
+% author names and affiliations
+% use a multiple column layout for up to two different
+% affiliations
+
+\author{\IEEEauthorblockN{Mohd Asri Bin Mohamad Stambul}
+\IEEEauthorblockA{Universiti Kebangsaan Malaysia\\
+Bangi , Selangor\\
+Email: mdasri.stambul@yahoo.com}}
+%\and
+%\IEEEauthorblockN{Authors Name/s per 2nd Affiliation (Author)}
+%\IEEEauthorblockA{line 1 (of Affiliation): dept. name of organization\\
+%line 2: name of organization, acronyms acceptable\\
+%line 3: City, Country\\
+%line 4: Email: name@xyz.com}
+%}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+%\boldmath
+IEEE 802.11 Wireless LAN (WLAN) have gained increasing popularity in recent years, providing users with both mobility and flexibility in accessing information. Because of the poor performance, users always neglect the security parts in WLAN configuration setup. The WLAN performance depended on the technical options chosen during encryption, authentication and re-keying configuration. This research investigates the performance analysis of a range of security levels based upon variations of WEP, WPA and WPA2 in a variety of Wireless LAN architectures. This research also describes a performance analysis measured over a range of experiments run on testbed and using some tools. 
+
+
+\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the conference you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals/conferences frown on
+% math in the abstract anyway.
+
+% no keywords
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{\textbf{Introduction}}
+% no \IEEEPARstart
+
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+Wireless networks are becoming popular nowadays due to its mobility, portability, flexibility and seamless connectivity. Many people using this wireless networks especially in public places like shopping malls, airports, coffee cafes, hotels and in universities. However, wireless networks are naturally more vulnerable to attack and can suffer from variable performance in comparison with wired network.
+
+IEEE 802.11i (WPA2) was developed to replace previous version of wireless LAN security protocol, WEP (Wired Equivalent Piracy) which was found weakness and vulnerabilities of its implementation. This paper describes the performance analysis of IEEE 802.11i and its variants in Wireless LANs and compares the result with WEP and WPA (WiFi Protected Access) variants. 
+
+In this review paper, we divided into a few section. Section 2 describes the issues that we have concluded from this paper. Section 3 highlights about the objectives of this paper while Section 4 describes of the previous related studied were done before. Section 5 describes about the methodology to run this experiments and the security levels tested. Section 6 were discuss the result from the experiments and lastly Section 7 covers the conclusions.
+
+
+
+
+
+
+\section{ ISSUES }
+
+The reduced in performance has been a common reason for people to limit the usage of security in Wireless LAN equipment such as wireless PCs and embedded devices such as PDAs. Existing solutions for wireless LAN networks have been exposed to security vulnerabilities and previous study has addressed and evaluated the security performance of IEEE 802.11 wireless networks using single sever client architecture and simple traffic models. 
+
+The previous performance result has depended on technical options chosen for for encryption, authentication and re-keying. There are several protocol of wireless LAN or IEEE 802.11 such 802.11a, b, g and the latest is 802.11n. In terms of security, several security protocols related with wireless network was introduced such as Wired Equivalent Privacy (WEP), Wi-Fi Protected Access (WPA) and the latest IEEE 802.11i (also known as WPA2). Wireless LAN has more exposed to security vulnerabilities compared to wired network. For example, WEP protocols were heavily criticized because of the poor security handling, Adam Stubblefield and AT&T publicly announced the first verification of the attack on WEP protocol. In the attack they were able to intercept transmissions and gain unauthorized access to wireless networks [5].
+
+
+
+\section {OBJECTIVE }
+
+This paper describes the performance analysis and practical measurement of a range of security levels based upon variations of WEP, WPA and WPA2 in a variety of Wireless LAN architectures. The results were compared from previous studies based on WEP (Wired Equivalent Privacy) and WPA (WiFi Protected Access) variants. The performance variation in operating performance is not only affected by the specific security protocol used (along with variables such as key length and reauthentication) but also network loading as well as the degree to which the security solutions are implemented in hardware.
+
+And lastly this paper also investigates into the performance of the implementation and effects of the WPA2 security specification on the throughput of wireless local area networks and compares this performance with that of earlier existing WEP and WPA architectures.  
+
+\section{RELATED WORK}
+
+Previous studied by Barka [3] describes the effects of WEP security protocols on IEEE 802.11g wireless network performance. The result shown that the implementation of WEP security protocol will decreased the network performance.
+
+Baghaei [2] extended this research by using multiple clients and evaluated with different security architectures. It also evaluated the effects of packet length on the network throughput with different security architectures. This study showed that WEP encryption reduced network performance when the network was congested. Network performance was also reduced as more clients were added to the network.
+
+\section{METHODOLOGY}
+
+A. 	Security Levels
+The following seven security levels were used to test the performance of the wireless network testbed. Each level has different degree of security and complexity. Each level represents a newer, more complex degree of security than the one preceding. The security layers defined are:
+	
+i.	No Security
+ii.	WEP shared key authentication and 40 bit encryption
+iii.	WEP shared key authentication and 104 bit encryption
+iv.	WPA with PSK authentication and RC4 encryption
+v.	WPA with EAP-TLS authentication and RC4 encryption 
+vi.	WPA2 with PSK authentication and AES encryption
+vii.	WPA2 with EAP-TLS authentication and AES
+
+B.	 Network Performance Measurement Testbed and Traffic Generator
+Clients and a server were configured as illustrated in Figure 1. IP traffic generation tool, IPTraffic [5] was used in this test because its ability to generate TCP/IP and UDP/IP traffic over a range of statistical profiles and loads. 
+
+\begin{figure}
+\includegraphics[width=2.5in]{topology.jpg}
+%\caption{Topology}
+\end{figure}
+
+The experiment were using server that was ran Microsoft Windows Server 2003 Enterprise Edition with Service Pack 1 as a operating system. This server operated as a RADIUS server via Microsoft's Internet Authentication Service. All PC clients were running Windows XP Professional with Service Pack 2. A Cisco Aironet 1130AG series access point, operating in the IEEE 802.11a 5GHz 54 Mbps mode, was connected to the server via a 100 Mbps Ethernet connection. As all of the PC-based wireless network devices used in the experiment were using Cisco-based. This can avoid vendor interoperability problems. The wireless network adapters in the clients were based on the Atheros AR5212 and AR5112 chipsets, which like the access point, have hardware accelerated encryption. None of the computers were running any processes which could affect processor or network utilisation. An HP iPAQ 900 was also included in the experiments as a client to evaluate the impact of security on small embedded devices.
+
+This experiment using two set of testing, the first set were synthetic benchmark tests which recorded the throughput of traffic flow between single and multiple client PCs, representing loaded and unloaded networks. For this testing, IPTraffic was used as the traffic generator and was configured as follows:
+
+•	Total number of packets sent to a client per synthetic test: 20,000. This number ensured that there were no effects from transient conditions.
+•	Traffic Protocol: TCP.
+•	TCP Window: 8192 bytes (default for Windows XP).
+•	Packet payloads using synthetic throughput tests: A payload of 1460 bytes corresponds to the maximum payload of a TCP segment.
+
+The second set of experiments consisted of downloading a large (11.2 MB) video file using the Cerberus FTP server. All results were analysed using ANOVA (Analysis of Variance) at the 95% confidence interval.
+
+\section{RESULT}
+
+While several experiments were performed, only the results from the 1460 byte TCP synthetic transfer and FTP transfer are described here, as these can be directly compared with results found in the earlier studies.
+
+A.	Effects on Throughput
+	In Figure 3a, the single client (light load) bars show the mean throughput for each of the security levels defined in Section 3.1. The differences are statistically significant for the single client-to-client transfer (F6,24  = 11.09, p < 0.01). While statistically significant, in practical network usage, this difference is not large. Over all security levels the mean throughput is 8.12 Mbps (s.d. 0.26). A standard deviation of 0.26 Mbps is a relatively small variance when considering the overall mean transfer rate.
+	
+	
+\begin{figure}
+\includegraphics[width=2.5in]{result1.jpg}
+\caption{TCP Payload}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=2.5in]{result2.jpg}
+\caption{TCP Payload [2]}
+\end{figure}
+
+The results in Figure  shows that different security levels have little effect on the throughput when modern hardware implementations of the security protocols are used. This result slightly different from the findings in [2] (Figure 2 ), which found that enabling the various security protocols radically decreased the throughput.
+
+	The second set of experiments involved an 11.2 MB FTP file transfer between Wireless LAN and PDA clients (Figure 1). Result shown performance did not degrade much across the various security levels. There are no statistically significant differences between the security levels (F6,24  = 2.00, p = 0.11). The mean throughput across all security levels is 9.73 Mbps (s.d. 0.29) for PCs, while for the PDA client it is 2.40 Mbps (s.d. 0.07). Again these results differ significantly from [2] (Figure 2), where the stronger security levels resulted in considerably lower throughput.
+
+\begin{figure}
+\includegraphics[width=2.5in]{result3.jpg}
+\caption{FTP Throughput}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=2.5in]{result4.jpg}
+\caption{FTP Throughput [3]}
+\end{figure}
+
+
+B. Effects with Multiple Clients in Wireless LANs
+These experiments were continued with multiple clients, similar results are found where a pair of Wireless LAN PC clients were configured to saturate a third wireless PC. In Figure 3, the multiple client bars show the total mean throughput of both senders. The combined throughput of both clients in Figure 1 is lower than the throughput of the single client test, as the access point was configured to operate at 24 Mbps in order to produce saturation for these tests. The differences between the security levels are again statistically significant; (F6,24  = 2.82, p < 0.05). As with the previous test, in practical terms this difference is not large; across all security levels, the mean throughput was 6.91 Mbps (s.d. 0.30).
+
+Overall result shown various security levels have different effects on the throughput  depending  on  the  number  of  clients  on  the network. For the synthetic TCP transfer by number of clients, the interaction is significant (F6,24  = 3.20, p < 0.05). Figure 3 shows  the  differences  in  throughput  between  single  and multiple client transfers. The WPA2-EAP-TLS security level demonstrates the largest decrease in throughput, dropping by 1.68 Mbps, while the other security levels drop by an average of 1.21 Mbps. This test shows that WPA2-EAP-TLS drops by almost 0.5 Mbps more than the other security levels when more clients are connected to the  network.  This difference  corresponds  to roughly 7% of the WPA2-EAP-TLS throughput with multiple clients.  Whether  this  difference  is  significant  in  practical terms depends on the typical usage of the Wireless LAN.
+
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command, the
+% \label for the overall figure must come after \caption.
+% \hfil must be used as a separator to get equal spacing.
+% The subfigure.sty package works much the same way, except \subfigure is
+% used instead of \subfloat.
+%
+%\begin{figure*}[!t]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+
+
+% An example of a floating table. Note that, for IEEE style tables, the 
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that IEEE does not put floats in the very first column - or typically
+% anywhere on the first page for that matter. Also, in-text middle ("here")
+% positioning is not used. Most IEEE journals/conferences use top floats
+% exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the \fnbelowfloat
+% command of the stfloats package.
+
+
+
+\section{CONCLUSION}
+This paper aimed to investigated the effects of  the  IEEE 802.11i security specification on the performance of wireless networks mostly where the security protocols were implemented in the hardware. It further aimed at drawing comparisons with the results of earlier experiments.
+
+The results show that wireless network performance in Wireless LANs is basically unaffected over the range of security levels applied, provided that the protocol and algorithm implementation is primarily hardware- based.  This is contrast with the results findings in [2] and [4], which found that performance decreased as more complex security levels were introduced.
+
+% use section* for acknowledgement
+\section*{Acknowledgment}
+
+
+I would like to thanks to Mr. Mohd Zamri Murah for introducing Latex software in order to write a paper. The preparation of this important document would not have been possible without the
+support, hard work and endless efforts from a number of individual.I would also like to gratefully acknowledge the support of some very special person in my life, my belove wife. She helped me immensely by giving me encouragement and love.This paper is end of my journey in finishing LateX Assignment.
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+
+\bibitem{IEEEhowto:n.r}
+A. Gin A and R. Hunt,\emph{“Performance Analysis of Evolving Wireless IEEE 802.11 Security architectures” ,\LaTeX},International Conference On Mobile Technology, Applications, And Systems, 2008. \hskip 1em plus
+  0.5em minus 0.4em\relax 
+ 
+\bibitem{IEEEhowto:n.r}
+N. Baghaei and R. Hunt, \emph{“IEEE 802.11 Wireless LAN Security Performance Using Multiple Clients”,\LaTeX},Networks, 2004. (ICON 2004). \hskip 1em plus
+  0.5em minus 0.4em\relax Proceedings. 12th IEEE International Conference, 2004.
+  
+  \bibitem{IEEEhowto:E.M.A}
+E. Barka, M. Boulmalf, A. Altenji, H. Al Suwaidi, H. Khazaimy and M. Al Mansouri,  \emph{“Impact od Security on the Performance of wireless – Local Area Networks”, \LaTeX},United Arab University, 2006. \hskip 1em plus
+  0.5em minus 0.4em\relax 
+  
+   \bibitem{IEEEhowto:n.r}
+A. Agarwal and  W. Wang, \emph{“Measuring Performance Impact of Security Protocols in Wireless Local Area Networks”,\LaTeX},The Second International Conference on Broadband Networks. October ,2005. \hskip 1em plus
+  0.5em minus 0.4em\relax Boston, Massachusette, USA. 
+  
+  \bibitem{IEEEhowto:}
+  IPTraffic, \url{http://www.zti-telecom.com/EN/IPTraffic_TM_KeyFeatures.html}
+  
+  
+  
+  
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
